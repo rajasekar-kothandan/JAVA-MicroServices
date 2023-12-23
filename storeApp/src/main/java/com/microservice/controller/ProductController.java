@@ -21,55 +21,55 @@ public class ProductController {
     private IProductService productService;
 
     @PostMapping(value = "/products", produces = {MediaType.APPLICATION_JSON_VALUE},
-    consumes = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Product addProduct(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product) {
 
         return productService.addProduct(product);
     }
 
-    @PutMapping(value = "/products", produces = {MediaType.APPLICATION_JSON_VALUE},
+    @PutMapping(value = "/products/{id}", produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseStatus(code = HttpStatus.OK)
-    public Product updateProduct(@RequestBody Product product){
+    public Product updateProduct(@PathVariable("id") Integer id, @RequestBody Product product) {
 
-        return productService.updateProduct(product);
+        return productService.updateProduct(id, product);
     }
 
     @DeleteMapping(value = "/products/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void deleteProductById(@PathVariable("id") Integer id){
+    public void deleteProductById(@PathVariable("id") Integer id) {
 
         productService.deleteProductById(id);
     }
 
     @GetMapping(value = "/products/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
     //@ResponseStatus(code = HttpStatus.OK)
-    public Product getProductById(@PathVariable("id") Integer id){
+    public Product getProductById(@PathVariable("id") Integer id) {
 
         return productService.getProductById(id);
     }
 
     @GetMapping(value = "/products", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Product> getAllProductById(){
+    public List<Product> getAllProductById() {
 
         return productService.getAllProduct();
     }
 
     @GetMapping(value = "/products/name/{name}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Product> getProductByName(@PathVariable("name") String name){
+    public List<Product> getProductByName(@PathVariable("name") String name) {
 
         return productService.findByName(name);
     }
 
     @GetMapping(value = "/products/brand/{brand}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Product> getProductByBrand(@PathVariable("brand") String brand){
+    public List<Product> getProductByBrand(@PathVariable("brand") String brand) {
 
         return productService.findByBrand(brand);
     }
 
     @GetMapping(value = "/products/price/{price}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Product> getProductByPrice(@PathVariable("price") double price){
+    public List<Product> getProductByPrice(@PathVariable("price") double price) {
 
         return productService.findByPrice(price);
     }

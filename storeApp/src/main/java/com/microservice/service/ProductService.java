@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,18 +18,28 @@ public class ProductService implements IProductService {
     @Qualifier(value = "productRepository")
     private ProductRepository productRepository;
 
-
     @Override
     public Product addProduct(Product product) {
 
         return productRepository.save(product);
     }
 
-    @Override
-    public Product updateProduct(Product product) {
-
-        return productRepository.save(product);
-    }
+   @Override
+   @Transactional
+   public Product updateProduct(Integer id, Product product) {
+       try {
+           if ( (productRepository.findById(id).get()) != null){
+               product.setId(id);
+               /*product.setName(product.getName());
+               product.setBrand(product.getBrand());
+               product.setPrice(product.getPrice());*/
+               productRepository.save(product);
+           }
+       } catch (Exception ex) {
+           ex.printStackTrace();
+       }
+       return product;
+   }
 
     @Override
     public List<Product> getAllProduct() {
