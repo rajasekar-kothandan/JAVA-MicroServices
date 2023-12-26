@@ -10,7 +10,10 @@ Q.How to start RabbitMQ?
 	RabbitMQ Default port:	http://localhost:15672
 
 Q.How to start application?
-	StoreAppEurekaServerApplication	->	StoreAppConfigServerApplication	->	StoreappApplication
+	StoreAppEurekaServerApplication	
+ 	 ->StoreAppConsumerEurekaRibbonApplication
+   	  ->StoreAppConfigServerApplication
+      	   ->StoreappApplication
 
 Q.Eureka notes:
 	Eureka Default port:	http://localhost:8761
