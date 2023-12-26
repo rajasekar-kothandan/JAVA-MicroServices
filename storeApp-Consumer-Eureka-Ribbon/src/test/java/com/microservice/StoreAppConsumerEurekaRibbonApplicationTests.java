@@ -1,4 +1,4 @@
-package com.microservice.storeAppConsumerEurekaRibbon;
+package com.microservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
