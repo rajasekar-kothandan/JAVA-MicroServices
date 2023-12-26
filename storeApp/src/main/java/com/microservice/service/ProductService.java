@@ -28,12 +28,12 @@ public class ProductService implements IProductService {
    @Transactional
    public Product updateProduct(Integer id, Product product) {
        try {
-           if ( (productRepository.findById(id).get()) != null){
-               product.setId(id);
-               /*product.setName(product.getName());
-               product.setBrand(product.getBrand());
-               product.setPrice(product.getPrice());*/
-               productRepository.save(product);
+            productRepository.findById(id).get();
+            product.setId(id);
+            /*product.setName(product.getName());
+              product.setBrand(product.getBrand());
+              product.setPrice(product.getPrice());*/
+            productRepository.save(product);
            }
        } catch (Exception ex) {
            ex.printStackTrace();
