@@ -8,3 +8,6 @@ C:\Windows\system32>rabbitmq-plugins enable rabbitmq_management
 
 RabbitMQ Default port:
   http://localhost:15672
+  
+Eureka Default port:
+  http://localhost:8761
