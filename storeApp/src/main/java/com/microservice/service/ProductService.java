@@ -34,7 +34,6 @@ public class ProductService implements IProductService {
               product.setBrand(product.getBrand());
               product.setPrice(product.getPrice());*/
             productRepository.save(product);
-           }
        } catch (Exception ex) {
            ex.printStackTrace();
        }
