@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/storeApp/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Config-Server/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Eureka-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Feign/pom.xml" />
       </list>
     </option>
   </component>

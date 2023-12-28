@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="storeApp" />
+        <module name="storeApp-Consumer-Eureka-Ribbon" />
+        <module name="storeApp-Consumer-Eureka-Feign" />
         <module name="storeApp-Config-Server" />
         <module name="storeApp-Eureka-Server" />
       </profile>
@@ -17,6 +19,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="storeApp" options="-parameters" />
       <module name="storeApp-Config-Server" options="-parameters" />
+      <module name="storeApp-Consumer-Eureka-Feign" options="-parameters" />
+      <module name="storeApp-Consumer-Eureka-Ribbon" options="-parameters" />
       <module name="storeApp-Eureka-Server" options="-parameters" />
     </option>
   </component>
