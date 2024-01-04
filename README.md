@@ -34,3 +34,22 @@ service-to-service call:
 		@LoadBalanced
 	2)OpenFeign:
 		@FeignClients
+		
+Q.What are the Methods of Circuit-Breaker Implementation?
+
+	1)Hystrix: (Supported version)
+		Spring Boot version < 2.4.X
+		Note:
+			Spring Boot: 2.3.10.RELEASE
+			Spring Cloud: Hoxton.SR11
+	2)Resilience4j:(Supported version)
+		Spring Boot version >= 2.4.X
+
+Q.How to Implement spring cloud Hystrix?
+
+	1)Ribbon (RestTemplate):
+		@HystrixCommand(fallbackMethod = "")
+	2)OpenFeign:
+		@FeignClients(name="",fallback=)
+Note:
+	@HystrixCommand(fallbackMethod = "") / @FeignClients(fallback) will only works in a class marked with @Service/@Component.
