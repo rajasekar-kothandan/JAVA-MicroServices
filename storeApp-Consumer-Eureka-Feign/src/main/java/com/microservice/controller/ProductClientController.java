@@ -23,7 +23,7 @@ public class ProductClientController {
     }
 
     @GetMapping("get-products")
-    public List<Product> getProductById() {
+    public List<Product> getAllProductById() {
         List<Product> products = productServiceProxy.getAllProductById();
         return products;
     }
