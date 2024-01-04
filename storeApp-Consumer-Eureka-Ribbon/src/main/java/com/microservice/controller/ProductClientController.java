@@ -10,6 +10,9 @@ import org.springframework.web.client.RestTemplate;
 @Scope("request")
 public class ProductClientController {
 
+	/*
+     * Registry aware RestTemplate (HTTP Client)
+     * */
     @Autowired
     private RestTemplate restTemplate;
 
