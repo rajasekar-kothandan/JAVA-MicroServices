@@ -24,7 +24,7 @@ public interface ProductServiceProxy {
     public List<Product> getProductByBrands(@PathVariable("brand") String brand);
 
     @GetMapping(value = "/products/price/{price}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Product> getProductByPrices(@PathVariable("price") String price);
+    public List<Product> getProductByPrices(@PathVariable("price") Double price);
 
     @GetMapping(value = "/products", produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<Product> getAllProductByIds();

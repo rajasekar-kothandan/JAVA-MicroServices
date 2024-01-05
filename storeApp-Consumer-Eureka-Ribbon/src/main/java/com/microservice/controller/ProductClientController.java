@@ -47,7 +47,7 @@ public class ProductClientController {
     }
 
     @GetMapping(value = "/get-product-price/{price}")
-    public List<Product> getProductByPrice(@PathVariable("price") String price) {
+    public List<Product> getProductByPrice(@PathVariable("price") Double price) {
 
         // To get Product details by price
         List<Product> product = restTemplate.getForObject("http://product-service/products/price/" + price, ArrayList.class);

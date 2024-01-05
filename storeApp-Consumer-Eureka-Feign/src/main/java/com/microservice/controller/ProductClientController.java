@@ -42,7 +42,7 @@ public class ProductClientController {
     }
 
     @GetMapping("get-product-price/{price}")
-    public List<Product> getProductByPrice(@PathVariable("price") String price) {
+    public List<Product> getProductByPrice(@PathVariable("price") Double price) {
 
         List<Product> product = productServiceProxy.getProductByPrices(price);
         return product;
