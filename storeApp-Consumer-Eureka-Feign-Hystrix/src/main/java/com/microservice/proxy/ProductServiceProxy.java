@@ -15,6 +15,15 @@ public interface ProductServiceProxy {
     @GetMapping(value = "/products/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
     public Product getProductById(@PathVariable("id") Integer id);
 
+    @GetMapping(value = "/products/name/{name}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<Product> getProductByName(@PathVariable("name") String name);
+
+    @GetMapping(value = "/products/brand/{brand}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<Product> getProductByBrand(@PathVariable("brand") String brand);
+
+    @GetMapping(value = "/products/price/{price}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<Product> getProductByPrice(@PathVariable("price") Double price);
+
     @GetMapping(value = "/products", produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<Product> getAllProductById();
 

@@ -16,10 +16,31 @@ public class ProductClientController {
     @Autowired
     ProductServiceProxy productServiceProxy;
 
-//    http://localhost:9994/get-products/1
-    @GetMapping("get-products/{id}")
+//    http://localhost:9994/get-product-id/1
+    @GetMapping("get-product-id/{id}")
     public Product getProductById(@PathVariable("id") int id) {
         Product product = productServiceProxy.getProductById(id);
+        return product;
+    }
+
+    @GetMapping("get-product-name/{name}")
+    public List<Product> getProductById(@PathVariable("name") String name) {
+
+        List<Product> product = productServiceProxy.getProductByName(name);
+        return product;
+    }
+
+    @GetMapping("get-product-brand/{brand}")
+    public List<Product> getProductByBrand(@PathVariable("brand") String brand) {
+
+        List<Product> product = productServiceProxy.getProductByBrand(brand);
+        return product;
+    }
+
+    @GetMapping("get-product-price/{price}")
+    public List<Product> getProductByPrice(@PathVariable("price") Double price) {
+
+        List<Product> product = productServiceProxy.getProductByPrice(price);
         return product;
     }
 
