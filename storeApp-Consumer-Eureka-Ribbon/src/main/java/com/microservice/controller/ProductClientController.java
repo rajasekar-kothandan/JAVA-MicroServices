@@ -14,8 +14,10 @@ import java.util.List;
 public class ProductClientController {
 
     /*
-     * Registry aware RestTemplate (HTTP Client)
+     * Registry aware RestTemplate (HTTP Client).
+     * ProductClientController connects to ProductController(storeApp) through Eureka server Service_ID "product-service"
      * */
+
     @Autowired
     private RestTemplate restTemplate;
 
