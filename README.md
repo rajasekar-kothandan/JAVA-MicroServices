@@ -24,9 +24,12 @@ Q.How to start application?
 	4.storeApp-Consumer-Eureka-Ribbon (9997 - Depends_on_8761)
 		(or)
 	4.storeApp-Consumer-Eureka-Feign (9996	- Depends_on_8761)
+ 	5.storeApp-Consumer-Eureka-Ribbon-Hystrix (9995 - Depends_on_8761)
+  		(or)
+ 	5.storeApp-Consumer-Eureka-Feign-Hystrix (9994 - Depends_on_8761)
 Note:
-	Ribbon and Feign are consumers of application.
-	we can use (anyone or both) of consumers for application.
+	Ribbon and Feign are consumers of application. we can use (anyone or both) of consumers for application.
+ 	Ribbon-Hystrix and Feign-Hystrix are consumers of application with FallBackMethods.
 	
 service-to-service call:
 
