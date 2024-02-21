@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="storeApp-Consumer-Eureka-Feign-Hystrix" />
+        <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" />
         <module name="storeApp-Proxy-API" />
         <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" />
         <module name="storeApp" />
@@ -30,6 +31,7 @@
       <module name="storeApp-Consumer-Eureka-Feign-Hystrix" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" options="-parameters" />
+      <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" options="-parameters" />
       <module name="storeApp-Eureka-Server" options="-parameters" />
       <module name="storeApp-Proxy-API" options="-parameters" />
       <module name="storeApp-Proxy-API (2)" options="-parameters" />
