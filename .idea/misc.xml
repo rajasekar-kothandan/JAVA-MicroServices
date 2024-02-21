@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Feign/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Feign-Hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/storeApp-Proxy-API/pom.xml" />
       </list>
     </option>
   </component>
