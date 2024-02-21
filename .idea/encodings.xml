@@ -13,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Eureka-Server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Eureka-Server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storeApp-Proxy-API-Eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storeApp-Proxy-API-Eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Proxy-API/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Proxy-API/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp/src/main/java" charset="UTF-8" />

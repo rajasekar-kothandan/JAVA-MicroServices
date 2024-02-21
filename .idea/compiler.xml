@@ -15,8 +15,12 @@
         <module name="storeApp-Consumer-Eureka-Feign" />
         <module name="storeApp-Config-Server" />
         <module name="storeApp-Eureka-Server" />
+        <module name="storeApp-Proxy-API-Eureka" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="storeApp-Proxy-API (2)" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -28,6 +32,8 @@
       <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" options="-parameters" />
       <module name="storeApp-Eureka-Server" options="-parameters" />
       <module name="storeApp-Proxy-API" options="-parameters" />
+      <module name="storeApp-Proxy-API (2)" options="-parameters" />
+      <module name="storeApp-Proxy-API-Eureka" options="-parameters" />
     </option>
   </component>
 </project>
