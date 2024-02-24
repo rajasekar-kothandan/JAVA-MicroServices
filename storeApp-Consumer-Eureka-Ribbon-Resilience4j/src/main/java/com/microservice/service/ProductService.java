@@ -2,6 +2,7 @@ package com.microservice.service;
 
 import com.microservice.domain.Product;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,7 @@ public class ProductService {
     /*
      * @CircuitBreaker(name="",fallbackMethod = "") will only works in a class marked with @Service/@Component.
      * */
+    @Retry(name = "product-service")
     @CircuitBreaker(name="product-service",fallbackMethod = "fallbackMethodForGetProductById")
     public Product getProductById(int id) {
 
@@ -37,6 +39,7 @@ public class ProductService {
         return product;
     }
 
+    @Retry(name = "product-service")
     @CircuitBreaker(name="product-service",fallbackMethod = "fallbackMethodForGetProductByName")
     public List<Product> getProductByName(@PathVariable("name") String name) {
 
@@ -45,6 +48,7 @@ public class ProductService {
         return product;
     }
 
+    @Retry(name = "product-service")
     @CircuitBreaker(name="product-service",fallbackMethod = "fallbackMethodForGetProductByBrand")
     public List<Product> getProductByBrand(@PathVariable("brand") String brand) {
 
@@ -53,6 +57,7 @@ public class ProductService {
         return product;
     }
 
+    @Retry(name = "product-service")
     @CircuitBreaker(name="product-service",fallbackMethod = "fallbackMethodForGetProductByPrice")
     public List<Product> getProductByPrice(@PathVariable("price") Double price) {
 
@@ -61,6 +66,7 @@ public class ProductService {
         return product;
     }
 
+    @Retry(name = "product-service")
     @CircuitBreaker(name="product-service",fallbackMethod = "fallbackMethodForGetAllProducts")
     public List<Product> getAllProductById() {
 
