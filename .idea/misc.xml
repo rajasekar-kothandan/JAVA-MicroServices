@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/storeApp-Proxy-API-Eureka/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j/pom.xml" />
         <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Feign-Resilience4j/pom.xml" />
+        <option value="$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ/pom.xml" />
       </list>
     </option>
   </component>

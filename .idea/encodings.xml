@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Feign/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Hystrix/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon-Resilience4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storeApp-Consumer-Eureka-Ribbon/src/main/java" charset="UTF-8" />
