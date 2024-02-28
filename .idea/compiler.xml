@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="storeApp-Consumer-Eureka-Feign-Hystrix" />
-        <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ" />
         <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" />
         <module name="storeApp-Proxy-API" />
+        <module name="storeApp-SZ" />
+        <module name="storeApp-Config-Server" />
+        <module name="storeApp-Eureka-Server" />
+        <module name="storeApp-Consumer-Eureka-Feign-Resilience4j" />
+        <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ" />
         <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" />
         <module name="storeApp" />
         <module name="storeApp-Consumer-Eureka-Ribbon" />
         <module name="storeApp-Consumer-Eureka-Feign" />
-        <module name="storeApp-Config-Server" />
-        <module name="storeApp-Eureka-Server" />
         <module name="storeApp-Proxy-API-Eureka" />
-        <module name="storeApp-Consumer-Eureka-Feign-Resilience4j" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,6 +41,7 @@
       <module name="storeApp-Proxy-API" options="-parameters" />
       <module name="storeApp-Proxy-API (2)" options="-parameters" />
       <module name="storeApp-Proxy-API-Eureka" options="-parameters" />
+      <module name="storeApp-SZ" options="-parameters" />
     </option>
   </component>
 </project>
