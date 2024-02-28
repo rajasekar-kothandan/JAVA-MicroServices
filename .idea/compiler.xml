@@ -20,6 +20,7 @@
         <module name="storeApp-Consumer-Eureka-Ribbon" />
         <module name="storeApp-Consumer-Eureka-Feign" />
         <module name="storeApp-Proxy-API-Eureka" />
+        <module name="storeApp-Consumer-Eureka-Feign-Resilience4j-SZ" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +34,7 @@
       <module name="storeApp-Consumer-Eureka-Feign" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Feign-Hystrix" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Feign-Resilience4j" options="-parameters" />
+      <module name="storeApp-Consumer-Eureka-Feign-Resilience4j-SZ" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" options="-parameters" />
