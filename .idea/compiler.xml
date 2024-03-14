@@ -11,6 +11,7 @@
         <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" />
         <module name="storeApp-Proxy-API" />
         <module name="storeApp-SZ" />
+        <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-MP" />
         <module name="storeApp-Config-Server" />
         <module name="storeApp-Eureka-Server" />
         <module name="storeApp-Consumer-Eureka-Feign-Resilience4j" />
@@ -38,6 +39,7 @@
       <module name="storeApp-Consumer-Eureka-Ribbon" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Hystrix" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j" options="-parameters" />
+      <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-MP" options="-parameters" />
       <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ" options="-parameters" />
       <module name="storeApp-Eureka-Server" options="-parameters" />
       <module name="storeApp-Proxy-API" options="-parameters" />
