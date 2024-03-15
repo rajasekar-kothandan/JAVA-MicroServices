@@ -102,13 +102,13 @@ Q.How to Start zipkins in Docker?
 
 	1.open cmd
 	2.docker run -p 9411:9411 openzipkin/zipkin
-	3.http://inlocalhost:9411/zipkin/
+	3.http://localhost:9411/zipkin/
 
 
 Q.How to start prometheus to understand/read micrometer in Docker?
 
 	1.open cmd
 	2.docker run -p 9090:9090 -v C:\prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
-	3.http://inlocalhost:9090
+	3.http://localhost:9090
 Notes:
 	File(prometheus.yml) location should be C:\prometheus.yml
