@@ -2,12 +2,12 @@ package com.microservice.controller;
 
 import com.microservice.domain.Product;
 import com.microservice.service.ProductService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @Scope("request")
@@ -16,7 +16,7 @@ public class ProductClientController {
     @Autowired
     private ProductService productService;
 
-    //    http://localhost:9995/get-products/1
+    // http://localhost:9993/get-product-id/1
     @GetMapping("/get-product-id/{id}")
     public Product getProductById(@PathVariable("id") int id) {
 

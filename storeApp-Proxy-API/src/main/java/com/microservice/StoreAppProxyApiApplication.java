@@ -4,6 +4,7 @@ import com.microservice.filters.ErrorFilter;
 import com.microservice.filters.PostFilter;
 import com.microservice.filters.PreFilter;
 import com.microservice.filters.RouteFilter;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;

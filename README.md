@@ -1,5 +1,28 @@
 # Talent-Next-MicroServices
 
+Applications Name with port number:
+
+	1.storeApp-Config-Server							-	server.port=8888
+	2.storeApp-Eureka-Server							-	server.port=8761
+	3.storeApp											-	server.port=0
+	4.storeapp-SZ										-	server.port=0
+	5.storeApp-Consumer-Eureka-Feign					-	server.port=9996
+	6.toreApp-Consumer-Eureka-Feign-Hystrix				-	server.port=9994
+	7.storeApp-Consumer-Eureka-Feign-Resilience4j		-	server.port=9992
+	8.storeApp-Consumer-Eureka-Feign-Resilience4j-SZ	-	server.port=8998
+	9.storeApp-Consumer-Eureka-Ribbon					-	server.port=9997
+	10.storeApp-Consumer-Eureka-Ribbon-Hystrix			-	server.port=9995
+	11.storeApp-Consumer-Eureka-Ribbon-Resilience4j		-	server.port=9993
+	12.storeApp-Consumer-Eureka-Ribbon-Resilience4j-MP	-	server.port=8992
+	13.storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ	-	server.port=8999
+	14.storeApp-Proxy-API								-	server.port=8080
+	15.storeApp-Proxy-API-Eureka						-	server.port=8080
+
+Notes:
+	SZ - Sleuth and Zipkin
+	MP - Micrometer and Prometheus
+
+
 Q.How to start RabbitMQ?
 
 	service->Background Intelligent Transfer service
@@ -63,3 +86,29 @@ Q.How to Implement spring cloud Hystrix?
 		@FeignClients(name="",fallback=)
 Note:
 	@HystrixCommand(fallbackMethod = "") / @FeignClients(fallback) will only works in a class marked with @Service/@Component.
+
+
+Docker Commands:
+
+Q.How to Start RabbitMQ in Docker?
+
+	# latest RabbitMQ 3.13
+	1.open cmd
+	2.docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
+	3.http://localhost:15672/#/
+
+
+Q.How to Start zipkins in Docker?
+
+	1.open cmd
+	2.docker run -p 9411:9411 openzipkin/zipkin
+	3.http://inlocalhost:9411/zipkin/
+
+
+Q.How to start prometheus to understand/read micrometer in Docker?
+
+	1.open cmd
+	2.docker run -p 9090:9090 -v C:\prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+	3.http://inlocalhost:9090
+Notes:
+	File(prometheus.yml) location should be C:\prometheus.yml

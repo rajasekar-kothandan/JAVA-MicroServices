@@ -4,6 +4,7 @@ import com.microservice.filters.ErrorFilter;
 import com.microservice.filters.PostFilter;
 import com.microservice.filters.PreFilter;
 import com.microservice.filters.RouteFilter;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -13,33 +14,33 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class StoreAppProxyApiEurekaApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(StoreAppProxyApiEurekaApplication.class, args);
-	}
+        SpringApplication.run(StoreAppProxyApiEurekaApplication.class, args);
+    }
 
-	@Bean
-	public PreFilter getPreFilter(){
+    @Bean
+    public PreFilter getPreFilter() {
 
-		return new PreFilter();
-	}
+        return new PreFilter();
+    }
 
-	@Bean
-	public PostFilter getPostFilter(){
+    @Bean
+    public PostFilter getPostFilter() {
 
-		return new PostFilter();
-	}
+        return new PostFilter();
+    }
 
-	@Bean
-	public RouteFilter getRouteFilter(){
+    @Bean
+    public RouteFilter getRouteFilter() {
 
-		return new RouteFilter();
-	}
+        return new RouteFilter();
+    }
 
-	@Bean
-	public ErrorFilter getErrorFilter(){
+    @Bean
+    public ErrorFilter getErrorFilter() {
 
-		return new ErrorFilter();
-	}
+        return new ErrorFilter();
+    }
 
 }

@@ -2,13 +2,14 @@ package com.microservice.controller;
 
 import com.microservice.domain.Product;
 import com.microservice.proxy.ProductServiceProxy;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @Scope("request")
@@ -16,9 +17,10 @@ public class ProductClientController {
     @Autowired
     ProductServiceProxy productServiceProxy;
 
-//    http://localhost:9992/get-product-id/1
+    // http://localhost:9992/get-product-id/1
     @GetMapping("get-product-id/{id}")
     public Product getProductById(@PathVariable("id") int id) {
+
         Product product = productServiceProxy.getProductById(id);
         return product;
     }
@@ -49,4 +51,5 @@ public class ProductClientController {
         List<Product> products = productServiceProxy.getAllProductById();
         return products;
     }
+
 }

@@ -2,12 +2,13 @@ package com.microservice.proxy;
 
 import com.microservice.domain.Product;
 import com.microservice.fallback.ProductServiceFallback;
+
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.List;
 
 @FeignClient(name="product-service", fallback = ProductServiceFallback.class)
 public interface ProductServiceProxy {

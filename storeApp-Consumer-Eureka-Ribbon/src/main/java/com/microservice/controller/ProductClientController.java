@@ -1,27 +1,29 @@
 package com.microservice.controller;
 
 import com.microservice.domain.Product;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/*
+ * ProductClientController connects to ProductController(storeApp) through Eureka server Service_ID "product-service"
+ * */
 @RestController
 @Scope("request")
 public class ProductClientController {
 
     /*
      * Registry aware RestTemplate (HTTP Client).
-     * ProductClientController connects to ProductController(storeApp) through Eureka server Service_ID "product-service"
-     * */
-
+     */
     @Autowired
     private RestTemplate restTemplate;
 
-    //    http://localhost:9997/get-products/1
+    // http://localhost:9997/get-product-id/1
     @GetMapping("/get-product-id/{id}")
     public Product getProductById(@PathVariable("id") Integer id) {
 
@@ -87,4 +89,5 @@ public class ProductClientController {
         // To Delete Product details by ID
         restTemplate.delete("http://product-service/products/" + id);
     }
+
 }

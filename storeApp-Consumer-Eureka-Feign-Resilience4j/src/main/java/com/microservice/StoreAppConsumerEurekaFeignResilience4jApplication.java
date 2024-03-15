@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class StoreAppConsumerEurekaFeignResilience4jApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(StoreAppConsumerEurekaFeignResilience4jApplication.class, args);
 	}
 

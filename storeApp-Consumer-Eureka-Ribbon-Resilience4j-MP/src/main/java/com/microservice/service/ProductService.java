@@ -1,17 +1,19 @@
 package com.microservice.service;
 
 import com.microservice.domain.Product;
+
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 @Service
 public class ProductService {

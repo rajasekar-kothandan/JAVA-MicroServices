@@ -1,16 +1,18 @@
 package com.microservice.proxy;
 
 import com.microservice.domain.Product;
+
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name="product-service")
 public interface ProductServiceProxy {
@@ -44,7 +46,7 @@ public interface ProductServiceProxy {
 
         System.out.println("Exception Raised with the message:=======> "+cause.getMessage());
         return new Product(id, "Monitor", "Jio", 34343.0);
-    };
+    }
 
     public default List<Product> fallbackMethodGetProductByName(@PathVariable("name") String name, Throwable cause){
 
@@ -52,25 +54,25 @@ public interface ProductServiceProxy {
         ArrayList<Product> products = new ArrayList<Product>();
         products.add(new Product(1, name, "Jio", 34343.0));
         return products;
-    };
+    }
 
     public default List<Product> fallbackMethodGetProductByBrand(@PathVariable("brand") String brand, Throwable cause){
 
         System.out.println("Exception Raised with the message:=======> "+cause.getMessage());
         return Collections.singletonList(new Product(1, "Monitor", brand, 34343.0));
-    };
+    }
 
     public default List<Product> fallbackMethodGetProductByPrice(@PathVariable("price") Double price, Throwable cause){
 
         System.out.println("Exception Raised with the message:=======> "+cause.getMessage());
         return Collections.singletonList(new Product(1, "Monitor", "Jio", price));
-    };
+    }
 
     public default List<Product> fallbackMethodGetAllProductById(Throwable cause){
 
         System.out.println("Exception Raised with the message:=======> "+cause.getMessage());
-//        return new ArrayList<Product>();
+        //return new ArrayList<Product>();
         return Collections.singletonList(new Product(1, "Monitor", "Jio", 50000.0));
-    };
+    }
 
 }

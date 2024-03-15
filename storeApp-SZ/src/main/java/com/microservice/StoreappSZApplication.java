@@ -1,8 +1,10 @@
 package com.microservice;
 
 import brave.sampler.Sampler;
+
 import com.microservice.domain.Product;
 import com.microservice.repository.ProductRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,32 +19,33 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class StoreappSZApplication implements CommandLineRunner {
 
-	private static Logger LOG = LoggerFactory.getLogger(StoreappSZApplication.class);
+    private static Logger LOG = LoggerFactory.getLogger(StoreappSZApplication.class);
 
-	@Autowired
-	@Qualifier("productRepository")
-	ProductRepository productRepository;
+    @Autowired
+    @Qualifier("productRepository")
+    ProductRepository productRepository;
 
-	public static void main(String[] args) {
-		LOG.info("STARTING THE APPLICATION");
-		SpringApplication.run(StoreappSZApplication.class, args);
-		LOG.info("APPLICATION FINISHED");
-	}
+    public static void main(String[] args) {
 
-	@Bean
-	public Sampler getSampler(){
+        LOG.info("STARTING THE APPLICATION");
+        SpringApplication.run(StoreappSZApplication.class, args);
+        LOG.info("APPLICATION FINISHED");
+    }
 
-		return Sampler.ALWAYS_SAMPLE;
-	}
+    @Bean
+    public Sampler getSampler() {
 
-	@Override
-	public void run(String... args) throws Exception {
+        return Sampler.ALWAYS_SAMPLE;
+    }
 
-		LOG.info("EXECUTING : command line runner");
-		productRepository.save(new Product(null,"TV","LG",74500.0));
-		productRepository.save(new Product(null,"Monitor","DELL",24000.0));
-		productRepository.save(new Product(null,"EarBuds2","Samsung",45000.0));
-		productRepository.save(new Product(null,"Mobile","OnePlus11R",34500.0));
-	}
+    @Override
+    public void run(String... args) throws Exception {
+
+        LOG.info("EXECUTING : command line runner");
+        productRepository.save(new Product(null, "TV", "LG", 74500.0));
+        productRepository.save(new Product(null, "Monitor", "DELL", 24000.0));
+        productRepository.save(new Product(null, "EarBuds2", "Samsung", 45000.0));
+        productRepository.save(new Product(null, "Mobile", "OnePlus11R", 34500.0));
+    }
 
 }

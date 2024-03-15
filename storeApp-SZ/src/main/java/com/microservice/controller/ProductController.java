@@ -1,8 +1,10 @@
 package com.microservice.controller;
 
-import com.microservice.StoreappSZApplication;
 import com.microservice.domain.Product;
 import com.microservice.service.IProductService;
+
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +13,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
 
 @RestController
 @Scope("request")
@@ -52,9 +51,9 @@ public class ProductController {
     //@ResponseStatus(code = HttpStatus.OK)
     public Product getProductById(@PathVariable("id") Integer id) {
 
-        LOG.debug("In getProductById with ID: "+id);
-        Product product =   productService.getProductById(id);
-        LOG.debug("In getProductById with return value Product: "+product);
+        LOG.debug("In getProductById with ID: " + id);
+        Product product = productService.getProductById(id);
+        LOG.debug("In getProductById with return value Product: " + product);
         return product;
     }
 
@@ -81,4 +80,5 @@ public class ProductController {
 
         return productService.findByPrice(price);
     }
+
 }

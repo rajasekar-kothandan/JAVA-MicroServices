@@ -2,19 +2,19 @@ package com.microservice.controller;
 
 import com.microservice.domain.Product;
 import com.microservice.proxy.ProductServiceProxy;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+/*
+ * ProductClientController connects ProductServiceProxy
+ * */
 @RestController
 @Scope("request")
 public class ProductClientController {
-
-    /*
-    * ProductClientController connects ProductServiceProxy
-    * */
 
     @Autowired
     ProductServiceProxy productServiceProxy;
@@ -70,6 +70,7 @@ public class ProductClientController {
 
     @DeleteMapping(value = "delete-product-id/{id}")
     public void deleteProductById(@PathVariable("id") Integer id) {
+
         productServiceProxy.deleteProductByIds(id);
     }
 

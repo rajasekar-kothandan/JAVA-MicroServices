@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StoreAppConsumerEurekaRibbonResilience4jApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(StoreAppConsumerEurekaRibbonResilience4jApplication.class, args);
 	}
 

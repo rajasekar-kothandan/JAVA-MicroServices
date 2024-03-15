@@ -2,13 +2,14 @@ package com.microservice.service;
 
 import com.microservice.domain.Product;
 import com.microservice.repository.ProductRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service(value = "productService")
 @Scope("singleton")
@@ -24,21 +25,23 @@ public class ProductService implements IProductService {
         return productRepository.save(product);
     }
 
-   @Override
-   @Transactional
-   public Product updateProduct(Integer id, Product product) {
-       try {
+    @Override
+    @Transactional
+    public Product updateProduct(Integer id, Product product) {
+
+        try {
             productRepository.findById(id).get();
             product.setId(id);
             /*product.setName(product.getName());
               product.setBrand(product.getBrand());
               product.setPrice(product.getPrice());*/
             productRepository.save(product);
-       } catch (Exception ex) {
-           ex.printStackTrace();
-       }
-       return product;
-   }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return product;
+    }
 
     @Override
     public List<Product> getAllProduct() {
@@ -54,8 +57,8 @@ public class ProductService implements IProductService {
 
     @Override
     public void deleteProductById(Integer id) {
-        productRepository.deleteById(id);
 
+        productRepository.deleteById(id);
     }
 
     @Override
@@ -75,4 +78,5 @@ public class ProductService implements IProductService {
 
         return productRepository.findByPrice(price);
     }
+
 }

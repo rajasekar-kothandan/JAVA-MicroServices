@@ -2,14 +2,14 @@ package com.microservice.controller;
 
 import com.microservice.domain.Product;
 import com.microservice.service.ProductService;
+
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
 @RestController
 @Scope("request")
 public class ProductClientController {
@@ -19,7 +19,7 @@ public class ProductClientController {
 
     private Logger logger = LoggerFactory.getLogger(ProductClientController.class);
 
-    //    http://localhost:8999/get-products/1
+    // http://localhost:8999/get-product-id/1
     @GetMapping("/get-product-id/{id}")
     public Product getProductById(@PathVariable("id") int id) {
 
