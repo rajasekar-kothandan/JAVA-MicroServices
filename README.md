@@ -17,6 +17,7 @@ Applications Name with port number:
 	13.storeApp-Consumer-Eureka-Ribbon-Resilience4j-SZ	-	server.port=8999
 	14.storeApp-Proxy-API								-	server.port=8080
 	15.storeApp-Proxy-API-Eureka						-	server.port=8080
+	16.storeApp-cloud-gateway-api						-	server.port=8082
 
 Notes:
 	SZ - Sleuth and Zipkin
