@@ -4,7 +4,7 @@
     <module name="storeApp-Consumer-Eureka-Ribbon-Resilience4j-MP" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.microservice.*" />
+        <option name="PATTERN" value="com.microservice.filters.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
